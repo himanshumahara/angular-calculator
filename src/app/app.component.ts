@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculator';
+  private _title = 'test calculator';
+
+  getTitle(){
+    return this.title;
+  }
+  setTitle(value:string){
+    this._title = value;
+  }
 }

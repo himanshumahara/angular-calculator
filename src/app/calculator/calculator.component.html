@@ -1,49 +1,52 @@
-<article class="calculator calculator-wrapper">
-    <section class="calculator-input">
-        <input type="text"/>
+<article class="calculator calculator-wrapper" #calculatorsection>
+    <section class="calculator-input-display-wrapper" [class.focused]="isFocused">
+        <div class="calculator-input-wrapper">
+            <div class="calculator-display-total">{{lastExpression}}</div>
+            <div class="calculator-input-expression" #calculatorInput editable=true >{{expText}}</div>
+        </div>
     </section>
     <section class="calculator-buttons-section">
         <div class="calculator-number-buttons">
             <div class="button-wrapper calcuator-button">
-                <button>7</button>
+                <button (click)="addkey('7')">7</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>8</button>
+                <button (click)="addkey('8')">8</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>9</button>
+                <button (click)="addkey('9')">9</button>
             </div>
 
             <div class="button-wrapper calcuator-button">
-                <button>4</button>
+                <button (click)="addkey('4')">4</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>5</button>
+                <button (click)="addkey('5')">5</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>6</button>
+                <button (click)="addkey('6')">6</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>1</button>
-            </div>
-            
-            <div class="button-wrapper calcuator-button">
-                <button>2</button>
+                <button (click)="addkey('1')">1</button>
             </div>
             
             <div class="button-wrapper calcuator-button">
-                <button>3</button>
+                <button (click)="addkey('2')">2</button>
+            </div>
+            
+            <div class="button-wrapper calcuator-button">
+                <button (click)="addkey('3')">3</button>
             </div>
             
 
             <div class="button-wrapper calcuator-button">
-                <button>0</button>
+                <button (click)="addkey('0')">0</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>.</button>
+                <button  (click)="addkey('.')" >.</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>%</button>
+                <button (click)="addkey('%')">%</button>
             </div>
             
             
@@ -52,22 +55,25 @@
         <div class="calculator-number-buttons">
 
             <div class="button-wrapper calcuator-button">
-                <button>/</button>
+                <button (click)="addkey('/')">/</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>x</button>
+                <button (click)="addkey('*')">x</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>-</button>
+                <button (click)="addkey('-')">-</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>+</button>
+                <button (click)="addkey('Backspace')">Del</button>
+            </div>
+            <div class="button-wrapper calcuator-button">
+                <button (click)="addkey('+')">+</button>
             </div>
             <div class="button-wrapper calcuator-button">
                 <button>U</button>
             </div>
             <div class="button-wrapper calcuator-button">
-                <button>(</button>
+                <button (click)="addkey('=')">=</button>
             </div>
             <div class="button-wrapper calcuator-button">
                 <button (click)="isStart = !isStart">C</button>
